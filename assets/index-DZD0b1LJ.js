@@ -46,6 +46,23 @@ Error generating stack: `+e.message+`
                         <li><a href="#"><span>4차 메뉴</span></a></li>
                         <li><a href="#"><span>4차 메뉴</span></a></li>
                     </ul>
+                </div>`},{id:`tab-responsive-t3`,name:`탭바디`,html:`
+                <div class="ui-tab_group">
+                    <div class="tab-select" data-responsive="640">
+                        <ul class="tab-ul type2 select col3">
+                            <li class="active"><a class="ui-tabs_link" data-button="tab" href="#tab1"><span>탭 타이틀명 1</span></a></li>
+                            <li><a class="ui-tabs_link" data-button="tab" href="#tab2"><span>탭 타이틀명이 들어갑니다</span></a></li>
+                        </ul>
+                    </div>
+
+                    <div class="ui-tab_content">
+                        <div class="tab_body active" id="tab1">
+                            컨텐츠 내용 1
+                        </div>
+                        <div class="tab_body" id="tab2">
+                            컨텐츠 내용 2
+                        </div>
+                    </div>
                 </div>`}]},{category:`8. Pagination`,items:[{id:`paging-start`,name:`페이지네이션 (시작 부분)`,html:`
                 <div class="pe-pagination">
                 <a class="page-navi prev" href="#">이전</a>
@@ -94,7 +111,47 @@ Error generating stack: `+e.message+`
                     <a class="page-link active" href="#">99</a>
                 </div>
                 <span class="page-navi next disabled">다음</span>
-                </div>`}]},{category:`9. Badges`,items:ar}],sr=o((e=>{var t=Symbol.for(`react.transitional.element`);function n(e,n,r){var i=null;if(r!==void 0&&(i=``+r),n.key!==void 0&&(i=``+n.key),`key`in n)for(var a in r={},n)a!==`key`&&(r[a]=n[a]);else r=n;return n=r.ref,{$$typeof:t,type:e,key:i,ref:n===void 0?null:n,props:r}}e.jsx=n,e.jsxs=n})),F=o(((e,t)=>{t.exports=sr()}))(),cr=[{id:`btn`,name:`기본 버튼`,html:`<button class="c-button">확인</button>`},{id:`inp`,name:`입력 폼`,html:`<input type="text" class="c-input" placeholder="내용을 입력하세요">`},{id:`box`,name:`카드 박스`,html:`<div class="c-box">콘텐츠 영역입니다.</div>`}];function lr({id:e,html:t,widthType:n,onRemove:r,onWidthChange:i}){let{attributes:a,listeners:o,setNodeRef:s,transform:c,transition:l,isDragging:u}=Qn({id:e});return(0,F.jsxs)(`div`,{ref:s,style:{transform:pe.Transform.toString(c),transition:l,opacity:u?.5:1,width:n===`auto`?`auto`:`100%`,display:n===`auto`?`inline-block`:`block`,marginRight:n===`auto`?`10px`:`0`,verticalAlign:`top`},className:`canvas-item ${n}`,children:[(0,F.jsxs)(`div`,{className:`item-controls`,children:[(0,F.jsx)(`div`,{className:`drag-handle`,...a,...o,children:`⠿`}),(0,F.jsxs)(`div`,{className:`width-selector`,children:[(0,F.jsx)(`button`,{className:n===`full`?`active`:``,onClick:()=>i(e,`full`),children:`Full`}),(0,F.jsx)(`button`,{className:n===`auto`?`active`:``,onClick:()=>i(e,`auto`),children:`Auto`})]}),(0,F.jsx)(`button`,{className:`del-btn`,onClick:()=>r(e),children:`×`})]}),(0,F.jsx)(`div`,{className:`item-content`,dangerouslySetInnerHTML:{__html:t}})]})}function ur(){let[e,t]=(0,_.useState)([]),[n,r]=(0,_.useState)(``),[i,a]=(0,_.useState)(1420),[o,s]=(0,_.useState)(50),c=Oe(De(Dt),De(St));cr.filter(e=>e.name.toLowerCase().includes(n.toLowerCase())||e.html.toLowerCase().includes(n.toLowerCase()));let l=e=>{t(t=>t.filter(t=>t.instanceId!==e))},u=e=>{t(t=>[...t,{...e,instanceId:`item-${Date.now()}`,widthType:`auto`}])},d=(e,n)=>{t(t=>t.map(t=>t.instanceId===e?{...t,widthType:n}:t))},f=e=>{let{active:n,over:r}=e;n&&r&&n.id!==r.id&&t(e=>Nn(e,e.findIndex(e=>e.instanceId===n.id),e.findIndex(e=>e.instanceId===r.id)))},[p,m]=(0,_.useState)([]),h=e=>{m(t=>t.includes(e)?t.filter(t=>t!==e):[...t,e])},g=()=>{m([])},[v,y]=(0,_.useState)(null);return(0,F.jsxs)(`div`,{className:`builder-wrapper`,children:[(0,F.jsxs)(`aside`,{className:`sidebar`,children:[(0,F.jsxs)(`div`,{className:`sidebar-header`,children:[(0,F.jsx)(`h2`,{children:`Library`}),(0,F.jsx)(`button`,{type:`button`,className:`btn-all-close`,onClick:g,title:`모두 접기`,children:`전체 닫기`})]}),v&&(0,F.jsx)(`div`,{className:`floating-preview`,children:(0,F.jsx)(`div`,{dangerouslySetInnerHTML:{__html:v}})}),(0,F.jsx)(`div`,{className:`accordion-menu`,children:or.map(e=>(0,F.jsxs)(`div`,{className:`acc-item ${p.includes(e.category)?`is-open`:``}`,children:[(0,F.jsx)(`button`,{className:`acc-header`,onClick:()=>h(e.category),children:e.category}),(0,F.jsx)(`div`,{className:`acc-body`,children:e.items.map(e=>(0,F.jsx)(`div`,{className:`comp-card`,onClick:()=>u(e),onMouseEnter:()=>y(e.html),onMouseLeave:()=>y(null),children:e.name},e.id))})]},e.category))})]}),(0,F.jsxs)(`main`,{className:`canvas`,children:[(0,F.jsxs)(`div`,{className:`layout-controls`,children:[(0,F.jsxs)(`label`,{children:[`Max Width:`,(0,F.jsx)(`input`,{type:`number`,value:i,onChange:e=>a(e.target.value)}),` px`]}),(0,F.jsxs)(`label`,{children:[`Side Padding:`,(0,F.jsx)(`input`,{type:`number`,value:o,onChange:e=>s(e.target.value)}),` px`]})]}),(0,F.jsx)(wn,{sensors:c,collisionDetection:Fe,onDragEnd:f,children:(0,F.jsxs)(`div`,{className:`drop-zone`,style:{maxWidth:`${i}px`,padding:`${o}px`,margin:`0 auto`},children:[(0,F.jsx)(Wn,{items:e.map(e=>e.instanceId),strategy:Bn,children:e.map(e=>(0,F.jsx)(lr,{id:e.instanceId,html:e.html,widthType:e.widthType,onRemove:l,onWidthChange:d},e.instanceId))}),e.length===0&&(0,F.jsx)(`p`,{className:`guide`,children:`컴포넌트를 추가하세요!`})]})})]}),(0,F.jsxs)(`section`,{className:`code-output`,children:[(0,F.jsxs)(`div`,{className:`header`,children:[(0,F.jsxs)(`h3`,{children:[`HTML Source (Container: `,i,`px)`]}),(0,F.jsx)(`button`,{onClick:()=>navigator.clipboard.writeText(e.map(e=>e.html).join(`
+                </div>`}]},{category:`9. Badges`,items:ar},{category:`10. Tables`,items:[{id:`table-basic-row`,name:`기본 테이블 (좌측제목형)`,html:`
+          <table class="table table-bordered text-center" data-responsive="drop">
+            <caption>표에 대한 설명이 들어갑니다.</caption>
+            <colgroup>
+              <col style="width: 30%;">
+              <col>
+            </colgroup>
+            <thead>
+              <tr>
+                <th scope="col">제목1</th>
+                <th scope="col">제목2</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">항목A</th>
+                <td>내용이 들어갑니다.</td>
+              </tr>
+              <tr>
+                <th scope="row">항목B</th>
+                <td>내용이 들어갑니다.</td>
+              </tr>
+            </tbody>
+          </table>`},{id:`table-basic-col`,name:`기본 테이블 (상단제목형)`,html:`
+          <table class="table table-bordered text-center">
+            <caption>표에 대한 설명</caption>
+            <thead>
+              <tr>
+                <th scope="col">번호</th>
+                <th scope="col">제목</th>
+                <th scope="col">등록일</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>1</td>
+                <td class="text-left">게시글 제목입니다.</td>
+                <td>2026-05-11</td>
+              </tr>
+            </tbody>
+          </table>`}]}],sr=o((e=>{var t=Symbol.for(`react.transitional.element`);function n(e,n,r){var i=null;if(r!==void 0&&(i=``+r),n.key!==void 0&&(i=``+n.key),`key`in n)for(var a in r={},n)a!==`key`&&(r[a]=n[a]);else r=n;return n=r.ref,{$$typeof:t,type:e,key:i,ref:n===void 0?null:n,props:r}}e.jsx=n,e.jsxs=n})),F=o(((e,t)=>{t.exports=sr()}))(),cr=[{id:`btn`,name:`기본 버튼`,html:`<button class="c-button">확인</button>`},{id:`inp`,name:`입력 폼`,html:`<input type="text" class="c-input" placeholder="내용을 입력하세요">`},{id:`box`,name:`카드 박스`,html:`<div class="c-box">콘텐츠 영역입니다.</div>`}];function lr({id:e,html:t,widthType:n,onRemove:r,onWidthChange:i}){let{attributes:a,listeners:o,setNodeRef:s,transform:c,transition:l,isDragging:u}=Qn({id:e});return(0,F.jsxs)(`div`,{ref:s,style:{transform:pe.Transform.toString(c),transition:l,opacity:u?.5:1,width:n===`auto`?`auto`:`100%`,display:n===`auto`?`inline-block`:`block`,marginRight:n===`auto`?`10px`:`0`,verticalAlign:`top`},className:`canvas-item ${n}`,children:[(0,F.jsxs)(`div`,{className:`item-controls`,children:[(0,F.jsx)(`div`,{className:`drag-handle`,...a,...o,children:`⠿`}),(0,F.jsxs)(`div`,{className:`width-selector`,children:[(0,F.jsx)(`button`,{className:n===`full`?`active`:``,onClick:()=>i(e,`full`),children:`Full`}),(0,F.jsx)(`button`,{className:n===`auto`?`active`:``,onClick:()=>i(e,`auto`),children:`Auto`})]}),(0,F.jsx)(`button`,{className:`del-btn`,onClick:()=>r(e),children:`×`})]}),(0,F.jsx)(`div`,{className:`item-content`,dangerouslySetInnerHTML:{__html:t}})]})}function ur(){let[e,t]=(0,_.useState)([]),[n,r]=(0,_.useState)(``),[i,a]=(0,_.useState)(1420),[o,s]=(0,_.useState)(50),c=Oe(De(Dt),De(St));cr.filter(e=>e.name.toLowerCase().includes(n.toLowerCase())||e.html.toLowerCase().includes(n.toLowerCase()));let l=e=>{t(t=>t.filter(t=>t.instanceId!==e))},u=e=>{t(t=>[...t,{...e,instanceId:`item-${Date.now()}`,widthType:`auto`}])},d=(e,n)=>{t(t=>t.map(t=>t.instanceId===e?{...t,widthType:n}:t))},f=e=>{let{active:n,over:r}=e;n&&r&&n.id!==r.id&&t(e=>Nn(e,e.findIndex(e=>e.instanceId===n.id),e.findIndex(e=>e.instanceId===r.id)))},[p,m]=(0,_.useState)([]),h=e=>{m(t=>t.includes(e)?t.filter(t=>t!==e):[...t,e])},g=()=>{m([])},[v,y]=(0,_.useState)(null);return(0,F.jsxs)(`div`,{className:`builder-wrapper`,children:[(0,F.jsxs)(`aside`,{className:`sidebar`,children:[(0,F.jsxs)(`div`,{className:`sidebar-header`,children:[(0,F.jsx)(`h2`,{children:`Library`}),(0,F.jsx)(`button`,{type:`button`,className:`btn-all-close`,onClick:g,title:`모두 접기`,children:`전체 닫기`})]}),v&&(0,F.jsx)(`div`,{className:`floating-preview`,children:(0,F.jsx)(`div`,{dangerouslySetInnerHTML:{__html:v}})}),(0,F.jsx)(`div`,{className:`accordion-menu`,children:or.map(e=>(0,F.jsxs)(`div`,{className:`acc-item ${p.includes(e.category)?`is-open`:``}`,children:[(0,F.jsx)(`button`,{className:`acc-header`,onClick:()=>h(e.category),children:e.category}),(0,F.jsx)(`div`,{className:`acc-body`,children:e.items.map(e=>(0,F.jsx)(`div`,{className:`comp-card`,onClick:()=>u(e),onMouseEnter:()=>y(e.html),onMouseLeave:()=>y(null),children:e.name},e.id))})]},e.category))})]}),(0,F.jsxs)(`main`,{className:`canvas`,children:[(0,F.jsxs)(`div`,{className:`layout-controls`,children:[(0,F.jsxs)(`label`,{children:[`Max Width:`,(0,F.jsx)(`input`,{type:`number`,value:i,onChange:e=>a(e.target.value)}),` px`]}),(0,F.jsxs)(`label`,{children:[`Side Padding:`,(0,F.jsx)(`input`,{type:`number`,value:o,onChange:e=>s(e.target.value)}),` px`]})]}),(0,F.jsx)(wn,{sensors:c,collisionDetection:Fe,onDragEnd:f,children:(0,F.jsxs)(`div`,{className:`drop-zone`,style:{maxWidth:`${i}px`,padding:`${o}px`,margin:`0 auto`},children:[(0,F.jsx)(Wn,{items:e.map(e=>e.instanceId),strategy:Bn,children:e.map(e=>(0,F.jsx)(lr,{id:e.instanceId,html:e.html,widthType:e.widthType,onRemove:l,onWidthChange:d},e.instanceId))}),e.length===0&&(0,F.jsx)(`p`,{className:`guide`,children:`컴포넌트를 추가하세요!`})]})})]}),(0,F.jsxs)(`section`,{className:`code-output`,children:[(0,F.jsxs)(`div`,{className:`header`,children:[(0,F.jsxs)(`h3`,{children:[`HTML Source (Container: `,i,`px)`]}),(0,F.jsx)(`button`,{onClick:()=>navigator.clipboard.writeText(e.map(e=>e.html).join(`
 `)),children:`Copy`})]}),(0,F.jsx)(`pre`,{children:`<div class="container" style="max-width: ${i}px; padding: 0 ${o}px;">\n`+e.map(e=>`  ${e.html}`).join(`
 `)+`
 </div>`})]})]})}(0,v.createRoot)(document.getElementById(`root`)).render((0,F.jsx)(_.StrictMode,{children:(0,F.jsx)(ur,{})}));
