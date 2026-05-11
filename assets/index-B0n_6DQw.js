@@ -111,47 +111,821 @@ Error generating stack: `+e.message+`
                     <a class="page-link active" href="#">99</a>
                 </div>
                 <span class="page-navi next disabled">다음</span>
-                </div>`}]},{category:`9. Badges`,items:ar},{category:`10. Tables`,items:[{id:`table-basic-row`,name:`기본 테이블 (좌측제목형)`,html:`
-          <table class="table table-bordered text-center" data-responsive="drop">
-            <caption>표에 대한 설명이 들어갑니다.</caption>
-            <colgroup>
-              <col style="width: 30%;">
-              <col>
-            </colgroup>
-            <thead>
-              <tr>
-                <th scope="col">제목1</th>
-                <th scope="col">제목2</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <th scope="row">항목A</th>
-                <td>내용이 들어갑니다.</td>
-              </tr>
-              <tr>
-                <th scope="row">항목B</th>
-                <td>내용이 들어갑니다.</td>
-              </tr>
-            </tbody>
-          </table>`},{id:`table-basic-col`,name:`기본 테이블 (상단제목형)`,html:`
-          <table class="table table-bordered text-center">
-            <caption>표에 대한 설명</caption>
-            <thead>
-              <tr>
-                <th scope="col">번호</th>
-                <th scope="col">제목</th>
-                <th scope="col">등록일</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>1</td>
-                <td class="text-left">게시글 제목입니다.</td>
-                <td>2026-05-11</td>
-              </tr>
-            </tbody>
-          </table>`}]}],sr=o((e=>{var t=Symbol.for(`react.transitional.element`);function n(e,n,r){var i=null;if(r!==void 0&&(i=``+r),n.key!==void 0&&(i=``+n.key),`key`in n)for(var a in r={},n)a!==`key`&&(r[a]=n[a]);else r=n;return n=r.ref,{$$typeof:t,type:e,key:i,ref:n===void 0?null:n,props:r}}e.jsx=n,e.jsxs=n})),F=o(((e,t)=>{t.exports=sr()}))(),cr=[{id:`btn`,name:`기본 버튼`,html:`<button class="c-button">확인</button>`},{id:`inp`,name:`입력 폼`,html:`<input type="text" class="c-input" placeholder="내용을 입력하세요">`},{id:`box`,name:`카드 박스`,html:`<div class="c-box">콘텐츠 영역입니다.</div>`}];function lr({id:e,html:t,widthType:n,onRemove:r,onWidthChange:i}){let{attributes:a,listeners:o,setNodeRef:s,transform:c,transition:l,isDragging:u}=Qn({id:e});return(0,F.jsxs)(`div`,{ref:s,style:{transform:pe.Transform.toString(c),transition:l,opacity:u?.5:1,width:n===`auto`?`auto`:`100%`,display:n===`auto`?`inline-block`:`block`,marginRight:n===`auto`?`10px`:`0`,verticalAlign:`top`},className:`canvas-item ${n}`,children:[(0,F.jsxs)(`div`,{className:`item-controls`,children:[(0,F.jsx)(`div`,{className:`drag-handle`,...a,...o,children:`⠿`}),(0,F.jsxs)(`div`,{className:`width-selector`,children:[(0,F.jsx)(`button`,{className:n===`full`?`active`:``,onClick:()=>i(e,`full`),children:`Full`}),(0,F.jsx)(`button`,{className:n===`auto`?`active`:``,onClick:()=>i(e,`auto`),children:`Auto`})]}),(0,F.jsx)(`button`,{className:`del-btn`,onClick:()=>r(e),children:`×`})]}),(0,F.jsx)(`div`,{className:`item-content`,dangerouslySetInnerHTML:{__html:t}})]})}function ur(){let[e,t]=(0,_.useState)([]),[n,r]=(0,_.useState)(``),[i,a]=(0,_.useState)(1420),[o,s]=(0,_.useState)(50),c=Oe(De(Dt),De(St));cr.filter(e=>e.name.toLowerCase().includes(n.toLowerCase())||e.html.toLowerCase().includes(n.toLowerCase()));let l=e=>{t(t=>t.filter(t=>t.instanceId!==e))},u=e=>{t(t=>[...t,{...e,instanceId:`item-${Date.now()}`,widthType:`auto`}])},d=(e,n)=>{t(t=>t.map(t=>t.instanceId===e?{...t,widthType:n}:t))},f=e=>{let{active:n,over:r}=e;n&&r&&n.id!==r.id&&t(e=>Nn(e,e.findIndex(e=>e.instanceId===n.id),e.findIndex(e=>e.instanceId===r.id)))},[p,m]=(0,_.useState)([]),h=e=>{m(t=>t.includes(e)?t.filter(t=>t!==e):[...t,e])},g=()=>{m([])},[v,y]=(0,_.useState)(null);return(0,F.jsxs)(`div`,{className:`builder-wrapper`,children:[(0,F.jsxs)(`aside`,{className:`sidebar`,children:[(0,F.jsxs)(`div`,{className:`sidebar-header`,children:[(0,F.jsx)(`h2`,{children:`Library`}),(0,F.jsx)(`button`,{type:`button`,className:`btn-all-close`,onClick:g,title:`모두 접기`,children:`전체 닫기`})]}),v&&(0,F.jsx)(`div`,{className:`floating-preview`,children:(0,F.jsx)(`div`,{dangerouslySetInnerHTML:{__html:v}})}),(0,F.jsx)(`div`,{className:`accordion-menu`,children:or.map(e=>(0,F.jsxs)(`div`,{className:`acc-item ${p.includes(e.category)?`is-open`:``}`,children:[(0,F.jsx)(`button`,{className:`acc-header`,onClick:()=>h(e.category),children:e.category}),(0,F.jsx)(`div`,{className:`acc-body`,children:e.items.map(e=>(0,F.jsx)(`div`,{className:`comp-card`,onClick:()=>u(e),onMouseEnter:()=>y(e.html),onMouseLeave:()=>y(null),children:e.name},e.id))})]},e.category))})]}),(0,F.jsxs)(`main`,{className:`canvas`,children:[(0,F.jsxs)(`div`,{className:`layout-controls`,children:[(0,F.jsxs)(`label`,{children:[`Max Width:`,(0,F.jsx)(`input`,{type:`number`,value:i,onChange:e=>a(e.target.value)}),` px`]}),(0,F.jsxs)(`label`,{children:[`Side Padding:`,(0,F.jsx)(`input`,{type:`number`,value:o,onChange:e=>s(e.target.value)}),` px`]})]}),(0,F.jsx)(wn,{sensors:c,collisionDetection:Fe,onDragEnd:f,children:(0,F.jsxs)(`div`,{className:`drop-zone`,style:{maxWidth:`${i}px`,padding:`${o}px`,margin:`0 auto`},children:[(0,F.jsx)(Wn,{items:e.map(e=>e.instanceId),strategy:Bn,children:e.map(e=>(0,F.jsx)(lr,{id:e.instanceId,html:e.html,widthType:e.widthType,onRemove:l,onWidthChange:d},e.instanceId))}),e.length===0&&(0,F.jsx)(`p`,{className:`guide`,children:`컴포넌트를 추가하세요!`})]})})]}),(0,F.jsxs)(`section`,{className:`code-output`,children:[(0,F.jsxs)(`div`,{className:`header`,children:[(0,F.jsxs)(`h3`,{children:[`HTML Source (Container: `,i,`px)`]}),(0,F.jsx)(`button`,{onClick:()=>navigator.clipboard.writeText(e.map(e=>e.html).join(`
-`)),children:`Copy`})]}),(0,F.jsx)(`pre`,{children:`<div class="container" style="max-width: ${i}px; padding: 0 ${o}px;">\n`+e.map(e=>`  ${e.html}`).join(`
+                </div>`}]},{category:`9. Badges`,items:ar},{category:`10. Tables`,items:[{id:`table-basic`,name:`기본 테이블 (실무타입)`,html:`
+                <table class="table table-bordered text-center" data-responsive="drop" data-breakpoint="767" data-minwidth="120" data-ratio="">
+                    <caption>교육/강좌 신청 내역 조회 - 순번, 기관 구분, 강좌명, 문의처, 교육기간, 교육시간, 신청일시, 신청 상태, 관리 정보제공</caption>
+
+                    <colgroup>
+                        <col style="width:8%">
+                        <col style="width:22%">
+                        <col style="width:14%">
+                        <col style="width:14%">
+                        <col style="width:14%">
+                        <col style="width:12%">
+                        <col style="width:14%">
+                    </colgroup>
+
+                    <thead>
+                        <tr>
+                            <th scope="col">순번</th>
+                            <th scope="col">교육명</th>
+                            <th scope="col">교육기간</th>
+                            <th scope="col">교육시간</th>
+                            <th scope="col">신청일시</th>
+                            <th scope="col">신청 상태</th>
+                            <th scope="col">관리</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                        <tr>
+                            <td>5</td>
+                            <td class="text-left">
+                                <a href="#" class="decoLink">철새 컬러링북</a>
+                            </td>
+                            <td>2025-11-13 ~ 2025-11-30</td>
+                            <td> 매주 화,수 <br> 10:00 ~ 11:00 </td>
+                            <td> 2025-12-15 12:00:00 </td>
+                            <td>
+                                <span class="pe-badge bg-light large information">추첨대기</span>
+                            </td>
+                            <td>
+                                <button type="button" class="btn tertiary small">취소</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>4</td>
+                            <td class="text-left">
+                                <a href="#" class="decoLink">탐조통장</a>
+                            </td>
+                            <td>2025-11-13 ~ 2025-11-30</td>
+                            <td> 10:00 ~ 11:00 </td>
+                            <td> 2025-12-15 12:00:00 </td>
+                            <td><span class="pe-badge bg-light large primary">대기자등록</span></td>
+                            <td>
+                                <button type="button" class="btn tertiary small">취소</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td class="text-left">
+                                <a href="#" class="decoLink">한국의 새 탐조수첩</a>
+                            </td>
+                            <td>2025-11-13 ~ 2025-11-30</td>
+                            <td> 10:00 ~ 11:00 </td>
+                            <td> 2025-12-15 12:00:00 </td>
+                            <td><span class="pe-badge bg-light large danger">사용자취소</span></td>
+                            <td>
+                                <span class="red">2025-08-17 12:00:00</span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td class="text-left">
+                                <a href="#" class="decoLink">조류생태전시관 학습지</a>
+                            </td>
+                            <td>2025-11-13 ~ 2025-11-30</td>
+                            <td> 10:00 ~ 11:00 </td>
+                            <td> 2025-12-15 12:00:00 </td>
+                            <td><span class="pe-badge bg-light large point">관리자취소</span></td>
+                            <td>
+                                <button class="btn tertiary small" data-button="ajaxModal" data-url="/html/yeyak/sub04/yeyak_ajax_pop.jsp" data-target="sample-modal opinion-mdal" data-focus-prev="ajaxModalClose" data-focus-next="sample-modal opinion-mdal">
+                                    반려사유
+                                </button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>1</td>
+                            <td class="text-left">
+                                <a href="#" class="decoLink">철새학습지</a>
+                            </td>
+                            <td>2025-11-13 ~ 2025-11-30</td>
+                            <td> 10:00 ~ 11:00 </td>
+                            <td> 2025-12-15 12:00:00 </td>
+                            <td><span class="pe-badge bg-light large success">신청완료</span></td>
+                            </td>
+                            <td> </td>
+                        </tr>
+                    </tbody>
+                </table>`},{id:`table-basic-row`,name:`기본 테이블 (좌측제목형)`,html:`
+                <table class="table table-bordered text-center" data-responsive="drop">
+                    <caption>표에 대한 설명이 들어갑니다.</caption>
+                    <colgroup>
+                    <col style="width: 30%;">
+                    <col>
+                    </colgroup>
+                    <thead>
+                    <tr>
+                        <th scope="col">제목1</th>
+                        <th scope="col">제목2</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <th scope="row">항목A</th>
+                        <td>내용이 들어갑니다.</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">항목B</th>
+                        <td>내용이 들어갑니다.</td>
+                    </tr>
+                    </tbody>
+                </table>`},{id:`table-basic-col`,name:`기본 테이블 (상단제목형)`,html:`
+                <table class="table table-bordered text-center">
+                    <caption>표에 대한 설명</caption>
+                    <thead>
+                    <tr>
+                        <th scope="col">번호</th>
+                        <th scope="col">제목</th>
+                        <th scope="col">등록일</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td class="text-left">게시글 제목입니다.</td>
+                        <td>2026-05-11</td>
+                    </tr>
+                    </tbody>
+                </table>`}]},{category:`11. Step Indicator`,items:[{id:`step-default-7`,name:`스텝 인디케이터 (유동형-7단계)`,html:`
+                <ol class="step-indicator">
+                    ${[1,2,3,4,5,6,7].map(e=>`
+                    <li class="step-indicator-item ${e===1?`done`:e===2?`active`:``}">
+                        <div class="step-indicator-marker">
+                        <span class="marker-item"><i class="marker-icon" aria-hidden="true"></i></span>
+                        <span class="marker-line"></span>
+                        </div>
+                        <div class="step-indicator-text">
+                        <span class="step-text-sub">${e}단계</span>
+                        <strong class="step-text-title">단계 제목</strong>
+                        </div>
+                    </li>`).join(``)}
+                </ol>`},{id:`step-fixed-7`,name:`스텝 인디케이터 (고정형-7단계)`,html:`
+                <ol class="step-indicator fixed">
+                    ${[1,2,3,4,5,6,7].map(e=>`
+                    <li class="step-indicator-item ${e===1?`done`:e===2?`active`:``}">
+                        <div class="step-indicator-marker">
+                        <span class="marker-item"><i class="marker-icon" aria-hidden="true"></i></span>
+                        <span class="marker-line"></span>
+                        </div>
+                        <div class="step-indicator-text">
+                        <span class="step-text-sub">${e}단계</span>
+                        <strong class="step-text-title">단계 제목</strong>
+                        </div>
+                    </li>`).join(``)}
+                </ol>`}]},{category:`12. Button Groups`,items:[{id:`btn-group-center`,name:`버튼 그룹 (중앙 정렬)`,html:`
+            <div class="pe-btn-group text-center">
+                <button type="button" class="btn tertiary large">취소</button>
+                <button type="button" class="btn primary large">확인</button>
+            </div>`},{id:`btn-group-right`,name:`버튼 그룹 (우측 정렬)`,html:`
+            <div class="pe-btn-group text-right">
+                <button type="button" class="btn tertiary large">취소</button>
+                <button type="button" class="btn primary large">확인</button>
+            </div>`},{id:`btn-group-left`,name:`버튼 그룹 (좌측 정렬)`,html:`
+            <div class="pe-btn-group text-left">
+                <button type="button" class="btn tertiary large">취소</button>
+                <button type="button" class="btn primary large">확인</button>
+            </div>`},{id:`btn-group-between`,name:`버튼 그룹 (양끝 정렬)`,html:`
+            <div class="pe-btn-group text-between">
+                <button type="button" class="btn tertiary large">이전</button>
+                <button type="button" class="btn primary large">다음</button>
+            </div>`},{id:`btn-group-complex`,name:`버튼 그룹 (복합 배치)`,html:`
+            <div class="pe-btn-group text-between">
+                <button type="button" class="btn tertiary large">목록</button>
+                <div class="pe-btn-wrap">
+                <button type="button" class="btn tertiary large">수정</button>
+                <button type="button" class="btn primary large">저장</button>
+                </div>
+            </div>`}]},{category:`13. 게시물 표시`,items:[{id:`search-list-top1`,name:`게시물 표시1`,html:`
+                <div class="search-list-top">
+                    <ul class="sch-info" aria-live="polite">
+                        <li>총 게시물 <span class="point">2</span>, 
+                            <span class="ui program--division-line">페이지 <strong class="text-point">1</strong> / 1</span> 
+                        </li>
+                    </ul>
+                    <div class="sch-wrap">
+                        <ul class="sch-sort">
+                            <li class="m-hide">
+                                <strong class="sort-label"><label for="search_result_count">목록 표시 개수</label></strong>
+                                <select class="pe-form-select-sort" id="search_result_count">
+                                    <option>12개</option>
+                                    <option>9개</option>
+                                </select>
+                                <button type="button" class="fe-btn btn-pagingSelect button_search" title="Apply">적용</button>
+                            </li>
+                            <li class="w-hide">
+                                <button type="button" class="btn large text ico-filter open-modal" data-target="popFilterId">
+                                    <span class="span">필터</span>
+                                    <span class="pe-badge bg primary number">2</span>
+                                    <i class="svg-icon ico-filter"></i>
+                                </button>
+                            </li>
+                        </ul>
+                    </div>
+                </div>`},{id:`search-list-top2`,name:`게시물 표시2`,html:`
+                <div class="search-list-top">
+                    <ul class="sch-info" aria-live="polite">
+                        <li>총 게시물 <span class="point">2</span>, 
+                            <span class="ui program--division-line">페이지 <strong class="text-point">1</strong> / 1</span> 
+                        </li>
+                    </ul>
+                    <div class="sch-wrap">
+                        <ul class="sch-sort">
+                            <li class="m-hide">
+                                <strong class="sort-label"><label for="search_result_count">목록 표시 개수</label></strong>
+                                <select class="pe-form-select-sort" id="search_result_count">
+                                    <option>12개</option>
+                                    <option>9개</option>
+                                </select>
+                                <button type="button" class="fe-btn btn-pagingSelect button_search" title="Apply">적용</button>
+                            </li>
+                            <li class="w-hide">
+                                <button type="button" class="btn large text ico-filter open-modal" data-target="popFilterId">
+                                    <span class="span">필터</span>
+                                    <span class="pe-badge bg primary number">2</span>
+                                    <i class="svg-icon ico-filter"></i>
+                                </button>
+                            </li>
+                            <li>
+                                <strong class="sort-label"><label for="sort">정렬기준</label></strong>
+                                <div class="w-sort-btn">
+                                    <button type="button" class="active">관련도순</button>
+                                    <button type="button">최신순</button>
+                                    <button type="button">인기순</button>
+                                </div>
+                                <div class="m-sort-btn">
+                                    <select class="pe-form-select-sort" id="sort">
+                                        <option>관련도순</option>
+                                        <option>최신순</option>
+                                        <option>인기순</option>
+                                    </select>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>`},{id:`search-list-top3`,name:`게시물 표시3`,html:`
+                <div class="search-list-top">
+                    <ul class="sch-info" aria-live="polite">
+                        <li>총 게시물 <span class="point">2</span>, 
+                            <span class="ui program--division-line">페이지 <strong class="text-point">1</strong> / 1</span> 
+                        </li>
+                    </ul>
+                    <div class="sch-wrap">
+                        <div class="sch-btn">
+                            <button type="button" class="btn tertiary medium outline-none"><i class="svg-icon ico-download" aria-hidden="true"></i>핵심버튼</button>
+                            <button type="button" class="btn tertiary medium outline-none"><i class="svg-icon ico-download" aria-hidden="true"></i>핵심버튼</button>
+                            <button type="button" class="btn tertiary medium outline-none"><i class="svg-icon ico-download" aria-hidden="true"></i>핵심버튼</button>
+                        </div>
+                        <ul class="sch-sort">
+                            <li class="m-hide">
+                                <strong class="sort-label"><label for="search_result_count">목록 표시 개수</label></strong>
+                                <select class="pe-form-select-sort" id="search_result_count">
+                                    <option>12개</option>
+                                    <option>9개</option>
+                                </select>
+                                <button type="button" class="fe-btn btn-pagingSelect button_search" title="Apply">적용</button>
+                            </li>
+                            <li class="w-hide">
+                                <button type="button" class="btn large text ico-filter open-modal" data-target="popFilterId">
+                                    <span class="span">필터</span>
+                                    <span class="pe-badge bg primary number">2</span>
+                                    <i class="svg-icon ico-filter"></i>
+                                </button>
+                            </li>
+                            <li>
+                                <strong class="sort-label"><label for="sort">정렬기준</label></strong>
+                                <div class="w-sort-btn">
+                                    <button type="button" class="active">관련도순</button>
+                                    <button type="button">최신순</button>
+                                    <button type="button">인기순</button>
+                                </div>
+                                <div class="m-sort-btn">
+                                    <select class="pe-form-select-sort" id="sort">
+                                        <option>관련도순</option>
+                                        <option>최신순</option>
+                                        <option>인기순</option>
+                                    </select>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>`}]},{category:`14. Search`,items:[{id:`Search1`,name:`검색 타입1`,html:`
+                <div class="search-top-box">
+                    <div class="sch-filter-box">
+                        <div class="search-top-head">
+                            <strong class="search-top-title">검색 필터</strong>
+                            <button type="button" class="search-top-close"><span class="skip">닫기</span></button>
+                        </div>
+                        <div class="filter-form-ground">
+                            <div class="filter-form">
+                                <div class="filter-form-line">
+                                    <div class="filter-form-box">
+                                        <div class="filter-form-item item-head">
+                                            <label for="select_1" class="item-title w-70-s">예약유형</label>
+                                            <button type="button" class="item-toggle"></button>
+                                        </div>
+                                        <div class="filter-form-item w-200-s item-body">
+                                            <select id="select_1" name="select_1" class="pe-form-select medium" title="예약유형 선택창">
+                                                <option value="전체">전체</option>
+                                                <option value="예약유형1">예약유형1</option>
+                                                <option value="예약유형2">예약유형2</option>
+                                                <option value="예약유형3">예약유형3</option>
+                                                <option value="예약유형4">예약유형4</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="filter-form-box">
+                                        <div class="filter-form-item item-head">
+                                            <label for="select_2" class="item-title w-70-s">신청상태</label>
+                                            <button type="button" class="item-toggle"></button>
+                                        </div>
+                                        <div class="filter-form-item w-200-s item-body">
+                                            <select id="select_2" name="select_2" class="pe-form-select medium" title="신청상태 선택창2">
+                                                <option value="전체">전체</option>
+                                                <option value="신청함">신청함</option>
+                                                <option value="신청안함">신청안함</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="filter-form-line">
+                                    <div class="filter-form-box">
+                                        <div class="filter-form-item item-head">
+                                            <label for="input_search" class="item-title w-70-s">프로그램명</label>
+                                            <button type="button" class="item-toggle"></button>
+                                        </div>
+                                        <div class="filter-form-item w-500-s item-body">
+                                            <div class="input-item-wrap">
+                                                <div class="input-item-box">
+                                                    <input type="text" id="input_search" name="input_search" class="input-item" title="프로그램명 검색창" placeholder="프로그램명을 입력해 주세요.">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="filter-form-box">
+                                        <div class="filter-form-item">
+                                            <div class="filter-btn-box">
+                                                <button type="button" class="btn secondary medium"><i class="svg-icon ico-refresh" aria-hidden="true"></i>초기화</button>
+                                                <button type="button" class="btn primary medium"><i class="svg-icon ico-search" aria-hidden="true"></i>검색하기</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>`},{id:`Search2`,name:`검색타입2`,html:`
+                <div class="search-top-box">
+                    <div class="sch-filter-box">
+                        <div class="search-top-head">
+                            <strong class="search-top-title">검색 필터</strong>
+                            <button type="button" class="search-top-close"><span class="skip">닫기</span></button>
+                        </div>
+                        <div class="filter-form-ground">
+                            <div class="filter-form">
+                                <div class="filter-form-line">
+                                    <div class="filter-form-box">
+                                        <div class="filter-form-item item-head w-60-s">
+                                            <label for="select_1" class="item-title">권역분류</label>
+                                            <button type="button" class="item-toggle"></button>
+                                        </div>
+                                        <div class="filter-form-item w-200-s item-body">
+                                            <select id="select_1" name="select_1" class="pe-form-select medium" title="권역분류 선택창">
+                                                <option value="전체">전체</option>
+                                                <option value="권역분류1">권역분류1</option>
+                                                <option value="권역분류2">권역분류2</option>
+                                                <option value="권역분류3">권역분류3</option>
+                                                <option value="권역분류4">권역분류4</option>
+                                                <option value="권역분류5">권역분류5</option>
+                                                <option value="권역분류6">권역분류6</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="filter-form-box">
+                                        <div class="filter-form-item item-head">
+                                            <label for="select_2" class="item-title">권역분류</label>
+                                            <button type="button" class="item-toggle"></button>
+                                        </div>
+                                        <div class="filter-form-item w-200-s item-body">
+                                            <select id="select_2" name="select_2" class="pe-form-select medium" title="권역분류 선택창2">
+                                                <option value="전체">전체</option>
+                                                <option value="권역분류1">권역분류1</option>
+                                                <option value="권역분류2">권역분류2</option>
+                                                <option value="권역분류3">권역분류3</option>
+                                                <option value="권역분류4">권역분류4</option>
+                                                <option value="권역분류5">권역분류5</option>
+                                                <option value="권역분류6">권역분류6</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="filter-form-box">
+                                        <div class="filter-form-item item-head w-60-s">
+                                            <label for="select_3" class="item-title">권역분류</label>
+                                            <button type="button" class="item-toggle"></button>
+                                        </div>
+                                        <div class="filter-form-item w-200-s item-body">
+                                            <select id="select_3" name="select_3" class="pe-form-select medium" title="권역분류 선택창3">
+                                                <option value="전체">전체</option>
+                                                <option value="권역분류1">권역분류1</option>
+                                                <option value="권역분류2">권역분류2</option>
+                                                <option value="권역분류3">권역분류3</option>
+                                                <option value="권역분류4">권역분류4</option>
+                                                <option value="권역분류5">권역분류5</option>
+                                                <option value="권역분류6">권역분류6</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="filter-form-line selectDate">
+                                    <div class="filter-form-box">
+                                        <div class="filter-form-item item-head w-60-s">
+                                            <label for="select_4" class="item-title">교육기간</label>
+                                            <button type="button" class="item-toggle"></button>
+                                        </div>
+                                        <div class="filter-form-item item-body">
+                                            <div class="pe-form-box">
+                                                <div class="pe-form-item dateSelector">
+                                                    <div class="input-item-wrap">
+                                                        <div class="input-item-box picker">
+                                                            <input type="text" id="date_picker3_1" name="date_picker3_1" class="input-item medium" title="시작날짜 입력창" placeholder="YYYY-MM-DD">
+                                                            <i class="picker-icon date-picker"></i>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="pe-form-item">
+                                                    <span class="pe-form-text">~</span>
+                                                </div>
+                                                <div class="pe-form-item dateSelector">
+                                                    <div class="input-item-wrap">
+                                                        <div class="input-item-box picker">
+                                                            <input type="text" id="date_picker3_2" name="date_picker3_2" class="input-item medium" title="종료날짜 입력창" placeholder="YYYY-MM-DD">
+                                                            <i class="picker-icon date-picker"></i>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="filter-form-line">
+                                    <div class="filter-form-box">
+                                        <div class="filter-form-item item-head ih-noLabel w-60-s">
+                                            <div class="item-title">이용기간</div>
+                                        </div>
+                                        <div class="filter-form-item w-600-s item-body">
+                                            <span class="just-text">2026-01-27 ~ 2026-01-29(input이 없고 일반 텍스트가 들어가야 할 때 사용해주세요.)</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="filter-form-line">
+                                    <div class="filter-form-box">
+                                        <div class="filter-form-item item-head w-60-s">
+                                            <label for="input_search" class="item-title">관광지명</label>
+                                            <button type="button" class="item-toggle"></button>
+                                        </div>
+                                        <div class="filter-form-item w-250-s item-body">
+                                            <div class="input-item-wrap">
+                                                <div class="input-item-box">
+                                                    <input type="text" id="input_search" name="input_search" class="input-item" title="관광지명 검색창" placeholder="관광지명을 입력해 주세요.">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="filter-form-box">
+                                        <div class="filter-form-item">
+                                            <div class="filter-btn-box">
+                                                <button type="button" class="btn secondary medium"><i class="svg-icon ico-refresh" aria-hidden="true"></i>초기화</button>
+                                                <button type="button" class="btn primary medium"><i class="svg-icon ico-search" aria-hidden="true"></i>검색하기</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="filter-chip">
+                                <strong class="chip-title">선택된 필터 <span class="num">4</span></strong>
+                                <div class="chip-content">
+                                    <button type="button" class="btn xlarge icon border">
+                                        <span class="sr-only">새로고침</span>
+                                        <i class="svg-icon ico-refresh"></i>
+                                    </button>
+                                    <div class="chip-wrap pe-tag-wrap large">
+                                        <span class="btn-tag">
+                                            중앙부처 복지사업
+                                            <button type="button" class="btn-delete">
+                                                <span class="sr-only">삭제</span>
+                                            </button>
+                                        </span>
+                                        <span class="btn-tag">
+                                            임신출산
+                                            <button type="button" class="btn-delete">
+                                                <span class="sr-only">삭제</span>
+                                            </button>
+                                        </span>
+                                        <span class="btn-tag">
+                                            저소득
+                                            <button type="button" class="btn-delete">
+                                                <span class="sr-only">삭제</span>
+                                            </button>
+                                        </span>
+                                        <span class="btn-tag">
+                                            맞춤형급여안내
+                                            <button type="button" class="btn-delete">
+                                                <span class="sr-only">삭제</span>
+                                            </button>
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>`},{id:`Search3`,name:`검색 타입3`,html:`
+                <div class="search-top-box detail-type">
+                    <div class="sch-filter-box">
+                        <div class="search-top-head">
+                            <strong class="search-top-title">검색 필터</strong>
+                            <button type="button" class="search-top-close"><span class="skip">닫기</span></button>
+                        </div>
+                        <div class="filter-form-ground">
+                            <div class="filter-form">
+                                <div class="filter-form-line">
+                                    <div class="filter-form-box">
+                                        <div class="filter-form-item item-head">
+                                            <label for="input_search" class="item-title">관광지명</label>
+                                            <button type="button" class="item-toggle"></button>
+                                        </div>
+                                        <div class="filter-form-item w-360-s item-body">
+                                            <div class="input-item-wrap">
+                                                <div class="input-item-box">
+                                                    <input type="text" id="input_search" name="input_search" class="input-item" title="관광지명 검색창" placeholder="관광지명어을 입력해 주세요.">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="filter-form-box detail-hide">
+                                        <div class="filter-form-item">
+                                            <div class="filter-btn-box">
+                                                <button type="button" class="btn tertiary medium"><i class="svg-icon ico-refresh" aria-hidden="true"></i>초기화</button>
+                                                <button type="button" class="btn primary medium"><i class="svg-icon ico-search" aria-hidden="true"></i>검색하기</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="filter-form detail-form">
+                                <div class="filter-form-line">
+                                    <div class="filter-form-box">
+                                        <div class="filter-form-item item-head">
+                                            <strong class="item-title">권역분류</strong>
+                                            <button type="button" class="item-toggle"></button>
+                                        </div>
+                                        <div class="filter-form-item item-body">
+                                            <div class="pe-check-area">
+                                                <div class="pe-form-check">
+                                                    <input type="radio" name="rdo_1" id="rdo_1" title="권역분류 다목적실 선택">
+                                                    <label for="rdo_1">다목적실</label>
+                                                </div>
+                                                <div class="pe-form-check">
+                                                    <input type="radio" name="rdo_1" id="rdo_2" title="권역분류 회의실 및 모임실 선택" checked="">
+                                                    <label for="rdo_2">회의실 및 모임실</label>
+                                                </div>
+                                                <div class="pe-form-check">
+                                                    <input type="radio" name="rdo_1" id="rdo_3" title="권역분류 연습실 선택" checked="">
+                                                    <label for="rdo_3">연습실</label>
+                                                </div>
+                                                <div class="pe-form-check">
+                                                    <input type="radio" name="rdo_1" id="rdo_4" title="권역분류 세미나실 선택" checked="">
+                                                    <label for="rdo_4">세미나실</label>
+                                                </div>
+                                                <div class="pe-form-check">
+                                                    <input type="radio" name="rdo_1" id="rdo_5" title="권역분류 작업실 선택" checked="">
+                                                    <label for="rdo_5">작업실</label>
+                                                </div>
+                                                <div class="pe-form-check">
+                                                    <input type="radio" name="rdo_1" id="rdo_6" title="권역분류 공연장 선택" checked="">
+                                                    <label for="rdo_6">공연장</label>
+                                                </div>
+                                                <div class="pe-form-check">
+                                                    <input type="radio" name="rdo_1" id="rdo_7" title="권역분류 기타 선택" checked="">
+                                                    <label for="rdo_7">기타</label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+​
+                                <div class="filter-form-line">
+                                    <div class="filter-form-box">
+                                        <div class="filter-form-item item-head">
+                                            <label for="select_popul" class="item-title">수용인원</label>
+                                            <button type="button" class="item-toggle"></button>
+                                        </div>
+                                        <div class="filter-form-item item-body">
+                                            <div class="pe-form-box">
+                                                <div class="pe-form-item w-120">
+                                                    <select id="select_popul" name="select_popul" class="pe-form-select medium" title="수용인원 선택창">
+                                                        <option value="전체">전체</option>
+                                                        <option value="5">5</option>
+                                                        <option value="10">10</option>
+                                                        <option value="15">15</option>
+                                                        <option value="20">20</option>
+                                                    </select>
+                                                </div>
+                                                <div class="pe-form-item">
+                                                    <span class="pe-form-text">명</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="filter-form-box">
+                                        <div class="filter-form-item item-head">
+                                            <strong class="item-title">주차여부</strong>
+                                            <button type="button" class="item-toggle"></button>
+                                        </div>
+                                        <div class="filter-form-item item-body">
+                                            <div class="pe-check-area">
+                                                <div class="pe-form-check">
+                                                    <input type="checkbox" id="chk_1" title="주차여부 주차가능 선택">
+                                                    <label for="chk_1">주차가능</label>
+                                                </div>
+                                                <div class="pe-form-check">
+                                                    <input type="checkbox" id="chk_2" title="주차여부 주차불가 선택">
+                                                    <label for="chk_2">주차불가</label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="filter-form-box">
+                                        <div class="filter-form-item item-head">
+                                            <strong class="item-title">장애인시설여부</strong>
+                                            <button type="button" class="item-toggle"></button>
+                                        </div>
+                                        <div class="filter-form-item item-body">
+                                            <div class="pe-check-area">
+                                                <div class="pe-form-check">
+                                                    <input type="checkbox" id="chk_3" title="장애인시설여부 있음 선택">
+                                                    <label for="chk_3">있음</label>
+                                                </div>
+                                                <div class="pe-form-check">
+                                                    <input type="checkbox" id="chk_4" title="장애인시설여부 없음 선택">
+                                                    <label for="chk_4">없음</label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="filter-form-box">
+                                        <div class="filter-form-item item-head">
+                                            <strong class="item-title">개방시간</strong>
+                                            <button type="button" class="item-toggle"></button>
+                                        </div>
+                                        <div class="filter-form-item item-body">
+                                            <div class="pe-form-box gap-8" data-type="timeRangePicker" data-start=".start-time" data-end=".end-time" data-interval="30" data-min-time="08:00" data-max-time="23:00">
+                                                <div class="pe-form-item w-170">
+                                                    <div class="input-item-wrap">
+                                                        <div class="input-item-box picker">
+                                                            <input type="text" id="time_picker1_1" class="input-item start-time" placeholder="HH:MM" readonly="" title="시작시간 입력창">
+                                                            <i class="picker-icon time-picker"></i>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="pe-form-item">
+                                                    <span class="pe-form-text">~</span>
+                                                </div>
+                                                <div class="pe-form-item w-170">
+                                                    <div class="input-item-wrap">
+                                                        <div class="input-item-box picker">
+                                                            <input type="text" id="time_picker1_2" class="input-item end-time" placeholder="HH:MM" readonly="" title="종료시간 입력창">
+                                                            <i class="picker-icon time-picker"></i>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+​
+                                <div class="filter-form-line">
+                                    <div class="filter-form-box">
+                                        <div class="filter-form-item item-head">
+                                            <strong class="item-title">개방날짜</strong>
+                                            <button type="button" class="item-toggle"></button>
+                                        </div>
+                                        <div class="filter-form-item item-body">
+                                            <div class="pe-check-area">
+                                                <div class="pe-form-check">
+                                                    <input type="checkbox" id="chk_00" title="개방날짜 월요일 선택">
+                                                    <label for="chk_00">월요일</label>
+                                                </div>
+                                                <div class="pe-form-check">
+                                                    <input type="checkbox" id="chk_01" title="개방날짜 화요일 선택">
+                                                    <label for="chk_01">화요일</label>
+                                                </div>
+                                                <div class="pe-form-check">
+                                                    <input type="checkbox" id="chk_02" title="개방날짜 수요일 선택">
+                                                    <label for="chk_02">수요일</label>
+                                                </div>
+                                                <div class="pe-form-check">
+                                                    <input type="checkbox" id="chk_03" title="개방날짜 목요일 선택">
+                                                    <label for="chk_03">목요일</label>
+                                                </div>
+                                                <div class="pe-form-check">
+                                                    <input type="checkbox" id="chk_04" title="개방날짜 금요일 선택">
+                                                    <label for="chk_04">금요일</label>
+                                                </div>
+                                                <div class="pe-form-check">
+                                                    <input type="checkbox" id="chk_05" title="개방날짜 토요일 선택">
+                                                    <label for="chk_05">토요일</label>
+                                                </div>
+                                                <div class="pe-form-check">
+                                                    <input type="checkbox" id="chk_06" title="개방날짜 일요일 선택">
+                                                    <label for="chk_06">일요일</label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="filter-form detail-show">
+                                <div class="filter-form-line">
+                                    <div class="filter-form-box">
+                                        <div class="filter-form-item">
+                                            <div class="filter-btn-box">
+                                                <button type="button" class="btn primary medium"><i class="svg-icon ico-search" aria-hidden="true"></i>검색하기</button>
+                                                <button type="button" class="btn tertiary medium"><i class="svg-icon ico-refresh" aria-hidden="true"></i>초기화</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="detail-toggle">
+                        <button class="sch-filter-btn btn secondary medium xlarge open-detail show"><i class="svg-icon ico-down" aria-hidden="true"></i>상세검색 펼치기</button>
+                        <button class="sch-filter-btn btn secondary medium xlarge close-detail"><i class="svg-icon ico-down" aria-hidden="true"></i>상세검색 닫기</button>
+                    </div>
+                </div>`},{id:`Search4`,name:`검색 논 필터 타입`,html:`
+                <div class="sch-filter-box custom">
+                    <div class="filter-form-ground">
+                        <div class="filter-form">
+                            <!-- 1 -->
+                            <div class="filter-form-line select-line">
+                                <div class="filter-form-box gap-16">
+                                    <div class="filter-form-item item-body">
+                                        <select name="category1" id="category1" class="pe-form-select medium" title="광역시/도를 선택해 주세요.">
+                                            <option value="">광역시/도 선택</option>
+                                            <option value="11">서울특별시</option>
+                                            <option value="21">부산광역시</option>
+                                            <option value="22">대구광역시</option>
+                                            <option value="23">인천광역시</option>
+                                            <option value="24">광주광역시</option>
+                                            <option value="25">대전광역시</option>
+                                            <option value="26">울산광역시</option>
+                                            <option value="29">세종특별자치시</option>
+                                            <option value="31">경기도</option>
+                                            <option value="32">강원특별자치도</option>
+                                            <option value="33">충청북도</option>
+                                            <option value="34">충청남도</option>
+                                            <option value="35">전북특별자치도</option>
+                                            <option value="36">전라남도</option>
+                                            <option value="37">경상북도</option>
+                                            <option value="38">경상남도</option>
+                                            <option value="39">제주특별자치도</option>
+                                        </select>
+                                    </div>
+            
+                                    <div class="filter-form-item item-body">
+                                        <select id="category2" name="category2" class="pe-form-select medium" title="시군구 선택">
+                                            <option value="">시군구 선택</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- 1 -->
+                            <!-- 1 -->
+                            <div class="filter-form-line gap-16 search-line">
+                                <div class="filter-form-box">
+                                    <div class="filter-form-item w-250-s item-body">
+                                        <div class="input-item-wrap">
+                                            <div class="input-item-box">
+                                                <input type="text" id="input_search" name="input_search" class="input-item" title="병원명을 입력해 주세요." placeholder="병원명을 입력해 주세요.">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="filter-form-box">
+                                    <div class="filter-form-item">
+                                        <div class="filter-btn-box">
+                                            <button type="button" class="btn primary medium">
+                                                <i class="svg-icon ico-search" aria-hidden="true"></i>조회
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- 1 -->
+                        </div>
+                    </div>
+                </div>`}]}],sr=o((e=>{var t=Symbol.for(`react.transitional.element`);function n(e,n,r){var i=null;if(r!==void 0&&(i=``+r),n.key!==void 0&&(i=``+n.key),`key`in n)for(var a in r={},n)a!==`key`&&(r[a]=n[a]);else r=n;return n=r.ref,{$$typeof:t,type:e,key:i,ref:n===void 0?null:n,props:r}}e.jsx=n,e.jsxs=n})),F=o(((e,t)=>{t.exports=sr()}))(),cr=[{id:`btn`,name:`기본 버튼`,html:`<button class="c-button">확인</button>`},{id:`inp`,name:`입력 폼`,html:`<input type="text" class="c-input" placeholder="내용을 입력하세요">`},{id:`box`,name:`카드 박스`,html:`<div class="c-box">콘텐츠 영역입니다.</div>`}];function lr({id:e,html:t,widthType:n,onRemove:r,onWidthChange:i}){let{attributes:a,listeners:o,setNodeRef:s,transform:c,transition:l,isDragging:u}=Qn({id:e});return(0,F.jsxs)(`div`,{ref:s,style:{transform:pe.Transform.toString(c),transition:l,opacity:u?.5:1,width:n===`auto`?`auto`:`100%`,display:n===`auto`?`inline-block`:`block`,marginRight:n===`auto`?`10px`:`0`,verticalAlign:`top`},className:`canvas-item ${n}`,children:[(0,F.jsxs)(`div`,{className:`item-controls`,children:[(0,F.jsx)(`div`,{className:`drag-handle`,...a,...o,children:`⠿`}),(0,F.jsxs)(`div`,{className:`width-selector`,children:[(0,F.jsx)(`button`,{className:n===`full`?`active`:``,onClick:()=>i(e,`full`),children:`Full`}),(0,F.jsx)(`button`,{className:n===`auto`?`active`:``,onClick:()=>i(e,`auto`),children:`Auto`})]}),(0,F.jsx)(`button`,{className:`del-btn`,onClick:()=>r(e),children:`×`})]}),(0,F.jsx)(`div`,{className:`item-content`,dangerouslySetInnerHTML:{__html:t}})]})}function ur(){let[e,t]=(0,_.useState)([]),[n,r]=(0,_.useState)(``),[i,a]=(0,_.useState)(1420),[o,s]=(0,_.useState)(50),[c,l]=(0,_.useState)(!1),u=Oe(De(Dt),De(St));cr.filter(e=>e.name.toLowerCase().includes(n.toLowerCase())||e.html.toLowerCase().includes(n.toLowerCase()));let d=e=>{t(t=>t.filter(t=>t.instanceId!==e))},f=e=>{t(t=>[...t,{...e,instanceId:`item-${Date.now()}`,widthType:`auto`}])},p=(e,n)=>{t(t=>t.map(t=>t.instanceId===e?{...t,widthType:n}:t))},m=e=>{let{active:n,over:r}=e;n&&r&&n.id!==r.id&&t(e=>Nn(e,e.findIndex(e=>e.instanceId===n.id),e.findIndex(e=>e.instanceId===r.id)))},[h,g]=(0,_.useState)([]),v=e=>{g(t=>t.includes(e)?t.filter(t=>t!==e):[...t,e])},y=()=>{g([])},[b,x]=(0,_.useState)(null);return(0,F.jsxs)(`div`,{className:`builder-wrapper`,children:[(0,F.jsxs)(`aside`,{className:`sidebar`,children:[(0,F.jsxs)(`div`,{className:`sidebar-header`,children:[(0,F.jsx)(`h2`,{children:`Library`}),(0,F.jsx)(`button`,{type:`button`,className:`btn-all-close`,onClick:y,title:`모두 접기`,children:`전체 닫기`})]}),b&&(0,F.jsx)(`div`,{className:`floating-preview`,children:(0,F.jsx)(`div`,{dangerouslySetInnerHTML:{__html:b}})}),(0,F.jsx)(`div`,{className:`accordion-menu`,children:or.map(e=>(0,F.jsxs)(`div`,{className:`acc-item ${h.includes(e.category)?`is-open`:``}`,children:[(0,F.jsx)(`button`,{className:`acc-header`,onClick:()=>v(e.category),children:e.category}),(0,F.jsx)(`div`,{className:`acc-body`,children:e.items.map(e=>(0,F.jsx)(`div`,{className:`comp-card`,onClick:()=>f(e),onMouseEnter:()=>x(e.html),onMouseLeave:()=>x(null),children:e.name},e.id))})]},e.category))})]}),(0,F.jsxs)(`main`,{className:`canvas`,children:[(0,F.jsxs)(`div`,{className:`layout-controls`,children:[(0,F.jsxs)(`label`,{children:[`Max Width:`,(0,F.jsx)(`input`,{type:`number`,value:i,onChange:e=>a(e.target.value)}),` px`]}),(0,F.jsxs)(`label`,{children:[`Side Padding:`,(0,F.jsx)(`input`,{type:`number`,value:o,onChange:e=>s(e.target.value)}),` px`]})]}),(0,F.jsx)(wn,{sensors:u,collisionDetection:Fe,onDragEnd:m,children:(0,F.jsxs)(`div`,{className:`drop-zone`,style:{maxWidth:`${i}px`,padding:`${o}px`,margin:`0 auto`},children:[(0,F.jsx)(Wn,{items:e.map(e=>e.instanceId),strategy:Bn,children:e.map(e=>(0,F.jsx)(lr,{id:e.instanceId,html:e.html,widthType:e.widthType,onRemove:d,onWidthChange:p},e.instanceId))}),e.length===0&&(0,F.jsx)(`p`,{className:`guide`,children:`컴포넌트를 추가하세요!`})]})})]}),(0,F.jsxs)(`section`,{className:`code-output ${c?`is-expanded`:``}`,children:[(0,F.jsxs)(`div`,{className:`header`,children:[(0,F.jsxs)(`h3`,{children:[`HTML Source (Container: `,i,`px)`]}),(0,F.jsxs)(`div`,{className:`actions`,children:[(0,F.jsx)(`button`,{type:`button`,onClick:()=>l(!c),style:{marginRight:`8px`,backgroundColor:c?`#007bff`:`#444`},children:c?`접기 ▲`:`전체보기 ▼`}),(0,F.jsx)(`button`,{onClick:()=>{let t=`<div class="container" style="max-width: ${i}px; padding: 0 ${o}px;">\n`+e.map(e=>`  ${e.html}`).join(`
+`)+`
+</div>`;navigator.clipboard.writeText(t),alert(`코드가 복사되었습니다.`)},children:`Copy`})]})]}),(0,F.jsx)(`pre`,{children:`<div class="container" style="max-width: ${i}px; padding: 0 ${o}px;">\n`+e.map(e=>`  ${e.html}`).join(`
 `)+`
 </div>`})]})]})}(0,v.createRoot)(document.getElementById(`root`)).render((0,F.jsx)(_.StrictMode,{children:(0,F.jsx)(ur,{})}));
