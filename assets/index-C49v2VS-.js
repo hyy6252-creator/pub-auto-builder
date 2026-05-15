@@ -924,8 +924,191 @@ Error generating stack: `+e.message+`
                             <!-- 1 -->
                         </div>
                     </div>
-                </div>`}]}],sr=o((e=>{var t=Symbol.for(`react.transitional.element`);function n(e,n,r){var i=null;if(r!==void 0&&(i=``+r),n.key!==void 0&&(i=``+n.key),`key`in n)for(var a in r={},n)a!==`key`&&(r[a]=n[a]);else r=n;return n=r.ref,{$$typeof:t,type:e,key:i,ref:n===void 0?null:n,props:r}}e.jsx=n,e.jsxs=n})),F=o(((e,t)=>{t.exports=sr()}))(),cr=[{id:`btn`,name:`기본 버튼`,html:`<button class="c-button">확인</button>`},{id:`inp`,name:`입력 폼`,html:`<input type="text" class="c-input" placeholder="내용을 입력하세요">`},{id:`box`,name:`카드 박스`,html:`<div class="c-box">콘텐츠 영역입니다.</div>`}];function lr({id:e,html:t,widthType:n,onRemove:r,onWidthChange:i}){let{attributes:a,listeners:o,setNodeRef:s,transform:c,transition:l,isDragging:u}=Qn({id:e});return(0,F.jsxs)(`div`,{ref:s,style:{transform:pe.Transform.toString(c),transition:l,opacity:u?.5:1,width:n===`auto`?`auto`:`100%`,display:n===`auto`?`inline-block`:`block`,marginRight:n===`auto`?`10px`:`0`,verticalAlign:`top`},className:`canvas-item ${n}`,children:[(0,F.jsxs)(`div`,{className:`item-controls`,children:[(0,F.jsx)(`div`,{className:`drag-handle`,...a,...o,children:`⠿`}),(0,F.jsxs)(`div`,{className:`width-selector`,children:[(0,F.jsx)(`button`,{className:n===`full`?`active`:``,onClick:()=>i(e,`full`),children:`Full`}),(0,F.jsx)(`button`,{className:n===`auto`?`active`:``,onClick:()=>i(e,`auto`),children:`Auto`})]}),(0,F.jsx)(`button`,{className:`del-btn`,onClick:()=>r(e),children:`×`})]}),(0,F.jsx)(`div`,{className:`item-content`,dangerouslySetInnerHTML:{__html:t}})]})}function ur(){let[e,t]=(0,_.useState)([]),[n,r]=(0,_.useState)(``),[i,a]=(0,_.useState)(1420),[o,s]=(0,_.useState)(50),[c,l]=(0,_.useState)(!1),u=Oe(De(Dt),De(St));cr.filter(e=>e.name.toLowerCase().includes(n.toLowerCase())||e.html.toLowerCase().includes(n.toLowerCase()));let d=e=>{t(t=>t.filter(t=>t.instanceId!==e))},f=e=>{t(t=>[...t,{...e,instanceId:`item-${Date.now()}`,widthType:`auto`}])},p=(e,n)=>{t(t=>t.map(t=>t.instanceId===e?{...t,widthType:n}:t))},m=e=>{let{active:n,over:r}=e;n&&r&&n.id!==r.id&&t(e=>Nn(e,e.findIndex(e=>e.instanceId===n.id),e.findIndex(e=>e.instanceId===r.id)))},[h,g]=(0,_.useState)([]),v=e=>{g(t=>t.includes(e)?t.filter(t=>t!==e):[...t,e])},y=()=>{g([])},[b,x]=(0,_.useState)(null);return(0,F.jsxs)(`div`,{className:`builder-wrapper`,children:[(0,F.jsxs)(`aside`,{className:`sidebar`,children:[(0,F.jsxs)(`div`,{className:`sidebar-header`,children:[(0,F.jsx)(`h2`,{children:`Library`}),(0,F.jsx)(`button`,{type:`button`,className:`btn-all-close`,onClick:y,title:`모두 접기`,children:`전체 닫기`})]}),b&&(0,F.jsx)(`div`,{className:`floating-preview`,children:(0,F.jsx)(`div`,{dangerouslySetInnerHTML:{__html:b}})}),(0,F.jsx)(`div`,{className:`accordion-menu`,children:or.map(e=>(0,F.jsxs)(`div`,{className:`acc-item ${h.includes(e.category)?`is-open`:``}`,children:[(0,F.jsx)(`button`,{className:`acc-header`,onClick:()=>v(e.category),children:e.category}),(0,F.jsx)(`div`,{className:`acc-body`,children:e.items.map(e=>(0,F.jsx)(`div`,{className:`comp-card`,onClick:()=>f(e),onMouseEnter:()=>x(e.html),onMouseLeave:()=>x(null),children:e.name},e.id))})]},e.category))})]}),(0,F.jsxs)(`main`,{className:`canvas`,children:[(0,F.jsxs)(`div`,{className:`layout-controls`,children:[(0,F.jsxs)(`label`,{children:[`Max Width:`,(0,F.jsx)(`input`,{type:`number`,value:i,onChange:e=>a(e.target.value)}),` px`]}),(0,F.jsxs)(`label`,{children:[`Side Padding:`,(0,F.jsx)(`input`,{type:`number`,value:o,onChange:e=>s(e.target.value)}),` px`]})]}),(0,F.jsx)(wn,{sensors:u,collisionDetection:Fe,onDragEnd:m,children:(0,F.jsxs)(`div`,{className:`drop-zone`,style:{maxWidth:`${i}px`,padding:`${o}px`,margin:`0 auto`},children:[(0,F.jsx)(Wn,{items:e.map(e=>e.instanceId),strategy:Bn,children:e.map(e=>(0,F.jsx)(lr,{id:e.instanceId,html:e.html,widthType:e.widthType,onRemove:d,onWidthChange:p},e.instanceId))}),e.length===0&&(0,F.jsx)(`p`,{className:`guide`,children:`컴포넌트를 추가하세요!`})]})})]}),(0,F.jsxs)(`section`,{className:`code-output ${c?`is-expanded`:``}`,children:[(0,F.jsxs)(`div`,{className:`header`,children:[(0,F.jsxs)(`h3`,{children:[`HTML Source (Container: `,i,`px)`]}),(0,F.jsxs)(`div`,{className:`actions`,children:[(0,F.jsx)(`button`,{type:`button`,onClick:()=>l(!c),style:{marginRight:`8px`,backgroundColor:c?`#007bff`:`#444`},children:c?`접기 ▲`:`전체보기 ▼`}),(0,F.jsx)(`button`,{onClick:()=>{let t=`<div class="container" style="max-width: ${i}px; padding: 0 ${o}px;">\n`+e.map(e=>`  ${e.html}`).join(`
-`)+`
-</div>`;navigator.clipboard.writeText(t),alert(`코드가 복사되었습니다.`)},children:`Copy`})]})]}),(0,F.jsx)(`pre`,{children:`<div class="container" style="max-width: ${i}px; padding: 0 ${o}px;">\n`+e.map(e=>`  ${e.html}`).join(`
+                </div>`}]},{category:`15. 개인정보 동의 폼`,items:[{id:`personal-info-consent`,name:`개인정보 수집·이용 동의 폼(단일)`,html:`
+                <div class="personal-info-box mb_30">
+                    <h2 class="h2">개인정보 수집·이용 동의 (필수항목)</h2>
+                    <div class="personal-info-text">
+                        <div class="info-text-inner">
+                            <p class="mt_0">
+                                <b>제주대학교병원은 공정계약 모니터링 설문조사 접수를 위해 아래와 같이 개인정보를 수집ㆍ이용하고자 합니다.<br> 내용을 자세히 읽으신 후 동의 여부를 결정하여 주세요.</b><br>
+                            </p>
+
+                            <h3 class="h3">개인정보의 수집ㆍ이용목적</h3>
+                            <table class="table table-bordered text-center" data-responsive="scroll" data-breakpoint="767" data-minwidth="" data-ratio="">
+                                <caption>개인정보 수집이용 내역 안내 - 항목, 수집·이용 목적, 보유·이용기간 정보제공</caption>
+
+                                <colgroup>
+                                    <col style="width: 33.333%">
+                                    <col style="width: 33.333%">
+                                    <col style="width: 33.333%">
+                                </colgroup>
+
+                                <thead>
+                                    <tr>
+                                        <th scope="col">항목</th>
+                                        <th scope="col">수집·이용 목적</th>
+                                        <th scope="col"><b>보유·이용기간</b></th>
+                                    </tr>
+                                </thead>
+
+                                <tbody>
+                                    <tr>
+                                        <td>개인정보식별자(CI), 신청자명, 휴대전화번호</td>
+                                        <td>공정계약 모니터링 설문조사 접수</td>
+                                        <td><b class="red">5년</b></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+
+                            <p> <b>위의 개인정보 수집·이용에 대한 동의를 거부할 권리가 있습니다.<br> 그러나 동의를 거부할 경우 공정계약 모니터링 설문조사 접수가 제한됩니다.</b></p>
+
+                            <h4 class="h4 txt-check">
+                                위와 같이 개인정보를 수집·이용하는데 동의하십니까?
+                            </h4>
+
+                        </div>
+                    </div>
+
+                    <div class="personal-check">
+                        <div class="pe-check-area">
+                            <div class="pe-form-check">
+                                <input type="radio" name="smsyn1" id="i_check1N">
+                                <label for="i_check1N">동의하지 않습니다.</label>
+                            </div>
+                            <div class="pe-form-check">
+                                <input type="radio" name="smsyn1" id="i_check1Y" checked="">
+                                <label for="i_check1Y">동의합니다.</label>
+                            </div>
+                        </div>
+                    </div>
+                </div>`},{id:`personal-info-consent-multi`,name:`개인정보 수집·이용 동의 폼(복수)`,html:`
+                <div class="personal-info-box">
+                    <div class="personal-info-title">
+                        <h2 class="h2">약관동의</h2>
+                        <div class="info-title-area">
+                            <strong class="main-text">[필수] 개인정보 수집 및 이용 동의</strong>
+                        </div>
+                    </div> 
+
+                    <div class="personal-info-text">
+                        <div class="info-text-inner">
+                            <p class="p">서천군은 평생학습기관 등록 신청 서비스를 제공을 위하여 아래와 같이 개인정보를 수집ㆍ이용하고자 합니다. 내용을 자세히 읽으신 후 동의 여부를 결정하여 주세요.</p>
+
+                            <h3 class="h3">개인정보의 수집ㆍ이용목적</h3>
+                            <table class="table table-bordered text-center" data-responsive="scroll" data-breakpoint="767" data-minwidth="75" data-ratio="20">
+                                <caption>개인정보 수집이용 내역 안내 - 항목, 수집·이용 목적, 보유·이용기간 정보제공</caption>
+
+                                <colgroup>
+                                    <col style="width: 33.333%">
+                                    <col style="width: 33.333%">
+                                    <col style="width: 33.333%">
+                                </colgroup>
+
+                                <thead>
+                                    <tr>
+                                        <th scope="col">항목</th>
+                                        <th scope="col">수집·이용 목적</th>
+                                        <th scope="col"><b>보유·이용기간</b></th>
+                                    </tr>
+                                </thead>
+
+                                <tbody>
+                                    <tr>
+                                        <td>개인정보식별자(CI), 신청자명, 휴대전화번호</td>
+                                        <td>평생학습기관 등록 신청</td>
+                                        <td><b>신청 취소 시까지</b></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+
+                            <p class="txt-check">위의 개인정보 수집·이용에 대한 동의를 거부할 권리가 있습니다. 그러나 동의를 거부할 경우 평생학습기관 등록 신청이 제한됩니다.</p>
+                            <p class="p">위와 같이 개인정보를 수집·이용하는데 동의하십니까?</p>
+                        </div>
+                    </div>
+
+                    <div class="personal-check">
+                        <div class="pe-check-area">
+                            <div class="pe-form-check">
+                                <input type="radio" name="rdo100" id="rdo100_1">
+                                <label for="rdo100_1">동의안함</label>
+                            </div>
+                            <div class="pe-form-check">
+                                <input type="radio" name="rdo100" id="rdo100_2" checked="">
+                                <label for="rdo100_2">동의함</label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="personal-info-title">
+                        <div class="info-title-area">
+                            <strong class="main-text">[선택] 개인정보 수집 및 이용 동의</strong>
+                        </div>
+                    </div> 
+
+                    <div class="personal-info-text">
+                        <div class="info-text-inner">
+                            <p class="p">서천군은 평생학습기관 등록 신청 서비스를 제공을 위하여 아래와 같이 개인정보를 수집ㆍ이용하고자 합니다. 내용을 자세히 읽으신 후 동의 여부를 결정하여 주세요.</p>
+
+                            <h3 class="h3">개인정보의 수집ㆍ이용목적</h3>
+                            <table class="table table-bordered text-center" data-responsive="scroll" data-breakpoint="767" data-minwidth="75" data-ratio="20">
+                                <caption>개인정보 수집이용 내역 안내 - 항목, 수집·이용 목적, 보유·이용기간 정보제공</caption>
+
+                                <colgroup>
+                                    <col style="width: 33.333%">
+                                    <col style="width: 33.333%">
+                                    <col style="width: 33.333%">
+                                </colgroup>
+
+                                <thead>
+                                    <tr>
+                                        <th scope="col">항목</th>
+                                        <th scope="col">수집·이용 목적</th>
+                                        <th scope="col"><b>보유·이용기간</b></th>
+                                    </tr>
+                                </thead>
+
+                                <tbody>
+                                    <tr>
+                                        <td>대표 휴대전화번호</td>
+                                        <td>평생학습기관 등록 신청</td>
+                                        <td><b>신청자 본인의 폐기 요청 및 신청 취소 시까지</b></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+
+                            <p class="txt-check">위의 개인정보 수집·이용에 대한 동의를 거부할 권리가 있습니다. 동의를 거부하여도 불이익은 없습니다.</p>
+                            <p class="p">위와 같이 개인정보를 수집·이용하는데 동의하십니까?</p>
+                        </div>
+                    </div>
+
+                    <div class="personal-check">
+                        <div class="pe-check-area">
+                            <div class="pe-form-check">
+                                <input type="radio" name="rdo200" id="rdo200_1">
+                                <label for="rdo200_1">동의안함</label>
+                            </div>
+                            <div class="pe-form-check">
+                                <input type="radio" name="rdo200" id="rdo200_2" checked="">
+                                <label for="rdo200_2">동의함</label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="personal-check custom1">
+                        <p class="p">대표 휴대전화번호는 동의를 받은 뒤 작성하였으며, 동의 없는 정보 입력으로 발생하는 모든 책임은 신청자 본인에게 있음을 확인합니다.</p>
+                        <div class="pe-check-area">
+                            <div class="pe-form-check">
+                                <input type="radio" name="rdo300" id="rdo300_1">
+                                <label for="rdo300_1">동의안함</label>
+                            </div>
+                            <div class="pe-form-check">
+                                <input type="radio" name="rdo300" id="rdo300_2" checked="">
+                                <label for="rdo300_2">동의함</label>
+                            </div>
+                        </div>
+                    </div>
+                </div>`}]}],sr=o((e=>{var t=Symbol.for(`react.transitional.element`);function n(e,n,r){var i=null;if(r!==void 0&&(i=``+r),n.key!==void 0&&(i=``+n.key),`key`in n)for(var a in r={},n)a!==`key`&&(r[a]=n[a]);else r=n;return n=r.ref,{$$typeof:t,type:e,key:i,ref:n===void 0?null:n,props:r}}e.jsx=n,e.jsxs=n})),F=o(((e,t)=>{t.exports=sr()}))(),cr=[{id:`btn`,name:`기본 버튼`,html:`<button class="c-button">확인</button>`},{id:`inp`,name:`입력 폼`,html:`<input type="text" class="c-input" placeholder="내용을 입력하세요">`},{id:`box`,name:`카드 박스`,html:`<div class="c-box">콘텐츠 영역입니다.</div>`}];function lr({id:e,html:t,widthType:n,onRemove:r,onWidthChange:i}){let{attributes:a,listeners:o,setNodeRef:s,transform:c,transition:l,isDragging:u}=Qn({id:e});return(0,F.jsxs)(`div`,{ref:s,style:{transform:pe.Transform.toString(c),transition:l,opacity:u?.5:1,width:n===`auto`?`auto`:`100%`,display:n===`auto`?`inline-block`:`block`,marginRight:n===`auto`?`10px`:`0`,verticalAlign:`top`},className:`canvas-item ${n}`,children:[(0,F.jsxs)(`div`,{className:`item-controls`,children:[(0,F.jsx)(`div`,{className:`drag-handle`,...a,...o,children:`⠿`}),(0,F.jsxs)(`div`,{className:`width-selector`,children:[(0,F.jsx)(`button`,{className:n===`full`?`active`:``,onClick:()=>i(e,`full`),children:`Full`}),(0,F.jsx)(`button`,{className:n===`auto`?`active`:``,onClick:()=>i(e,`auto`),children:`Auto`})]}),(0,F.jsx)(`button`,{className:`del-btn`,onClick:()=>r(e),children:`×`})]}),(0,F.jsx)(`div`,{className:`item-content`,dangerouslySetInnerHTML:{__html:t}})]})}function ur(){let[e,t]=(0,_.useState)([]),[n,r]=(0,_.useState)(``),[i,a]=(0,_.useState)(1420),[o,s]=(0,_.useState)(50),[c,l]=(0,_.useState)(!1),u=Oe(De(Dt),De(St));cr.filter(e=>e.name.toLowerCase().includes(n.toLowerCase())||e.html.toLowerCase().includes(n.toLowerCase()));let d=e=>{t(t=>t.filter(t=>t.instanceId!==e))},f=e=>{t(t=>[...t,{...e,instanceId:`item-${Date.now()}`,widthType:`auto`}])},p=(e,n)=>{t(t=>t.map(t=>t.instanceId===e?{...t,widthType:n}:t))},m=e=>{let{active:n,over:r}=e;n&&r&&n.id!==r.id&&t(e=>Nn(e,e.findIndex(e=>e.instanceId===n.id),e.findIndex(e=>e.instanceId===r.id)))},[h,g]=(0,_.useState)([]),v=e=>{g(t=>t.includes(e)?t.filter(t=>t!==e):[...t,e])},y=()=>{g([])},[b,x]=(0,_.useState)(null);return(0,F.jsxs)(`div`,{className:`builder-wrapper`,children:[(0,F.jsxs)(`aside`,{className:`sidebar`,children:[(0,F.jsxs)(`div`,{className:`sidebar-header`,children:[(0,F.jsx)(`h2`,{children:`Library`}),(0,F.jsx)(`button`,{type:`button`,className:`btn-all-close`,onClick:y,title:`모두 접기`,children:`전체 닫기`})]}),b&&(0,F.jsx)(`div`,{className:`floating-preview`,children:(0,F.jsx)(`div`,{dangerouslySetInnerHTML:{__html:b}})}),(0,F.jsx)(`div`,{className:`accordion-menu`,children:or.map(e=>(0,F.jsxs)(`div`,{className:`acc-item ${h.includes(e.category)?`is-open`:``}`,children:[(0,F.jsx)(`button`,{className:`acc-header`,onClick:()=>v(e.category),children:e.category}),(0,F.jsx)(`div`,{className:`acc-body`,children:e.items.map(e=>(0,F.jsx)(`div`,{className:`comp-card`,onClick:()=>f(e),onMouseEnter:()=>x(e.html),onMouseLeave:()=>x(null),children:e.name},e.id))})]},e.category))})]}),(0,F.jsxs)(`main`,{className:`canvas`,children:[(0,F.jsxs)(`div`,{className:`layout-controls`,children:[(0,F.jsxs)(`label`,{children:[`Max Width:`,(0,F.jsx)(`input`,{type:`number`,value:i,onChange:e=>a(e.target.value)}),` px`]}),(0,F.jsxs)(`label`,{children:[`Side Padding:`,(0,F.jsx)(`input`,{type:`number`,value:o,onChange:e=>s(e.target.value)}),` px`]})]}),(0,F.jsx)(wn,{sensors:u,collisionDetection:Fe,onDragEnd:m,children:(0,F.jsxs)(`div`,{className:`drop-zone`,style:{maxWidth:`${i}px`,padding:`${o}px`,margin:`0 auto`},children:[(0,F.jsx)(Wn,{items:e.map(e=>e.instanceId),strategy:Bn,children:e.map(e=>(0,F.jsx)(lr,{id:e.instanceId,html:e.html,widthType:e.widthType,onRemove:d,onWidthChange:p},e.instanceId))}),e.length===0&&(0,F.jsx)(`p`,{className:`guide`,children:`컴포넌트를 추가하세요!`})]})})]}),(0,F.jsxs)(`section`,{className:`code-output ${c?`is-expanded`:``}`,children:[(0,F.jsxs)(`div`,{className:`header`,children:[(0,F.jsxs)(`h3`,{children:[`HTML Source (Container: `,i,`px)`]}),(0,F.jsxs)(`div`,{className:`actions`,children:[(0,F.jsx)(`button`,{type:`button`,onClick:()=>l(!c),style:{marginRight:`8px`,backgroundColor:c?`#007bff`:`#444`},children:c?`접기 ▲`:`전체보기 ▼`}),(0,F.jsx)(`button`,{onClick:()=>{let t=e.map(e=>e.html).join(`
+
+`);navigator.clipboard.writeText(t),alert(`코드가 복사되었습니다.`)},children:`Copy`})]})]}),(0,F.jsx)(`pre`,{children:`<div class="container" style="max-width: ${i}px; padding: 0 ${o}px;">\n`+e.map(e=>`  ${e.html}`).join(`
 `)+`
 </div>`})]})]})}(0,v.createRoot)(document.getElementById(`root`)).render((0,F.jsx)(_.StrictMode,{children:(0,F.jsx)(ur,{})}));
